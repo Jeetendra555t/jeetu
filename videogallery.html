@@ -479,27 +479,7 @@
 
     <!-- JavaScript for Popups -->
     <script>
-        function openPopup(popupId) {
-            closePopup(); // Close any open popups first
-            var popup = document.getElementById('popup' + popupId);
-            var video = document.getElementById('video' + popupId);
-            if (popup) {
-                popup.style.display = 'flex';
-                video.play(); // Auto-play the video
-            }
-        }
-
-        function closePopup() {
-            var popups = document.querySelectorAll('.popup');
-            popups.forEach(function (popup) {
-                popup.style.display = 'none';
-                let video = popup.querySelector("video");
-                if (video) {
-                    video.pause();
-                    video.currentTime = 0; // Reset video to start when reopened
-                }
-            });
-        }
+        
 
         history.pushState("", document.title, window.location.pathname);
 
